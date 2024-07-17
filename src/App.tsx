@@ -78,10 +78,16 @@ function App() {
 
   return (
     <div className='app'>
-      <div className="app-wrapper">
+      <header className="app-header">
+        {/* If there's a header content, put it here */}
+      </header>
+      <main className="app-wrapper">
         <Result/>
         <Summary/>
-      </div>
+      </main>
+      <footer className="app-footer">
+        {/* If there's footer content, put it here */}
+      </footer>
     </div>
   );
 }
