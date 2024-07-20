@@ -22,7 +22,7 @@ html {
 
 
 .app {min-height: 100vh;display: flex;align-items: center;justify-content: center;}
-.app-wrapper {box-shadow: 5px 16px 20px 2px var(--pale-blue);border-radius: 25px;display: flex;flex-wrap: wrap;overflow: hidden;max-width: 735px;}
+.app-wrapper {box-shadow: 5px 16px 20px 2px var(--pale-blue);border-radius: 25px;display: flex;overflow: hidden;max-width: 735px;}
 .app-wrapper > * {flex: 1;padding: 45px;}
 
 .result {background: linear-gradient(var(--light-slate-blue-bg), var(--light-royal-blue-bg));border-radius: 25px;text-align: center;}
@@ -47,6 +47,10 @@ h2.title {
   background-color: hsl(from var(--text-color) h s l / 0.05);
   border-radius: 6px;
   font-size: clamp(1.6rem,4vw,1.8rem);
+}
+
+@media (min-width: 400px)and ( max-width: 600px) {
+  .summary-item {flex-wrap: wrap;gap: 10px}
 }
 
 .summaries > * + * {
@@ -114,10 +118,13 @@ span.score-value {
   .app-wrapper {
     padding: unset;
     border-radius: unset;
+    flex-direction: column;
   }
 
   .result {
     border-radius: 0 0 30px 30px;
   }
+
+  .app-wrapper > * {padding: 30px}
 }
 
